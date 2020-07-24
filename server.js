@@ -7,11 +7,15 @@ const sslOpts = {
 
 require('http')
     .createServer(serverHandler)
-    .listen(80, ()=> console.log("HTTP Ready!"));
+    .listen(8080, ()=> console.log("HTTP Ready!"));
+
+require('http')
+    .createServer(serverHandler)
+    .listen(8081, ()=> console.log("HTTP Ready!"));
 
 require('https')
     .createServer(sslOpts, serverHandler)
-    .listen(443, ()=> console.log("HTTPS Ready!"));
+    .listen(8443, ()=> console.log("HTTPS Ready!"));
 
 function serverHandler(req, res) {
     req.on('data', () => null);

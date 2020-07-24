@@ -1,7 +1,7 @@
 FROM node:7.2.1-alpine
 
 MAINTAINER continuousarchitect
-EXPOSE 80 443
+EXPOSE 8080 8443 8081
 
 #RUN apk --no-cache add openssl
 
